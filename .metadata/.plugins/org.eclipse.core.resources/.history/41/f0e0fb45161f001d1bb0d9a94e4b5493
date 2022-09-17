@@ -1,0 +1,68 @@
+package servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+/**
+ * Servlet implementation class Registro
+ */
+public class Registro extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	String nom ="";
+	String apellido = "";
+	public final String DIREC = "C:\\Users\\danie\\OneDrive\\Documentos\\PruebaPdf.pdf";
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Registro() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		PrintWriter sl = response.getWriter();
+		sl.println("<html><body>");
+		nom = request.getParameter("nombre");
+		apellido = request.getParameter("apellido");
+		sl.println("Nombre Introducido "+request.getParameter("nombre"));
+		sl.println("<br><br>");
+		sl.println("Apellido Introducido "+request.getParameter("apellido"));
+		sl.println("<br><br>");
+		sl.println("</body></html>");
+		nom = request.getParameter("nombre");
+		apellido = request.getParameter("apellido");
+		/*ap.setApellido(apellido);
+		ap.setNombre(nom);
+		System.out.println(ap.getNombre());
+		System.out.print(ap.getApellido());
+		ap.CrearPdfd(DIREC);*/
+		crearPdf();
+		
+	}
+	
+	public void crearPdf() throws FileNotFoundException ,IOException{
+		System.out.println(nom);
+		System.out.print(apellido);
+		ArchivoPrueba ap = new ArchivoPrueba(nom,apellido);
+		ap.CrearPdfd(DIREC);
+		System.out.println("archivo generado");
+	}
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

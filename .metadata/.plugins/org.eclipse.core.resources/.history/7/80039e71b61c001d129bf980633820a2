@@ -1,0 +1,30 @@
+package es.viancolab.pruebaservlets;
+
+import java.io.FileNotFoundException;
+
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.property.TextAlignment;
+
+public class nombre {
+	String nombre;
+	public nombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getNom() {
+		
+		return (nombre+" hola");
+	}
+	public void crearPdf(String dest) throws FileNotFoundException {
+	 PdfWriter pw = new PdfWriter(dest);
+     PdfDocument pd = new PdfDocument(pw);
+     Document doc = new Document(pd);
+     doc.setMargins(20f, 80f,20f,80f);
+     Paragraph titulo = new Paragraph("Nombre del Alumno" + nombre).setBold().setFontSize(12f);
+     titulo.setTextAlignment(TextAlignment.CENTER);
+     doc.add(titulo);
+     doc.close();
+	}
+}

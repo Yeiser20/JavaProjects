@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+C:\Users\danie\OneDrive\Documentos\Eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\555395767.index
+\PruebaServlet\src\main\java
+C:\Users\danie\OneDrive\Documentos\Eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2834173046.index
+\Ejemplillos\src\main\java
+C:\Users\danie\OneDrive\Documentos\Eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1812690624.index
+\Pruebas\src\main\java
+C:\Users\danie\OneDrive\Documentos\Eclipse\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1097897173.index
+\Racional\src

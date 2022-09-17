@@ -1,0 +1,83 @@
+package servlet;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.element.Text;
+
+/**
+ * Servlet implementation class Registro
+ */
+public class Registro extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	String nom ="";
+	String apellido = "";
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Registro() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		PrintWriter sl = response.getWriter();
+		sl.println("<html><body>");
+		nom = request.getParameter("nombre");
+		apellido = request.getParameter("apellido");
+		sl.println("Nombre Introducido "+request.getParameter("nombre"));
+		sl.println("<br><br>");
+		sl.println("Apellido Introducido "+request.getParameter("apellido"));
+		sl.println("<br><br>");
+		sl.println("</body></html>");
+		nom = request.getParameter("nombre");
+		apellido = request.getParameter("apellido");
+		/*ap.setApellido(apellido);
+		ap.setNombre(nom);
+		System.out.println(ap.getNombre());
+		System.out.print(ap.getApellido());
+		ap.CrearPdfd(DIREC);*/
+		crearPdf();
+		
+	}
+
+	public void crearPdf() throws FileNotFoundException {
+		System.out.println("nom");
+		String dest = "C:\\Users\\danie\\OneDrive\\Documentos\\PruebaPdf.pdf";
+		PdfWriter pw = new PdfWriter(dest);
+		PdfDocument pd = new PdfDocument(pw);
+		Document doc = new Document(pd);
+		Text tx = new Text("Nombre: "+nom+"/n");
+		Text tx1 = new Text("Apellido: "+apellido+"/n");
+		Paragraph p1 = new Paragraph().add(tx);
+		Paragraph p2 = new Paragraph().add(tx1);
+		doc.add(p1);
+		doc.add(p2);
+		doc.close();
+		System.out.println("Archivo Generado Correctamente");
+	}
+
+	
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

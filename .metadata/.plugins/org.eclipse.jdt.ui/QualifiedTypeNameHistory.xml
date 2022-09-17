@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.itextpdf.kernel.pdf.PdfWriter"/>
+    <fullyQualifiedTypeName name="com.itextpdf.kernel.pdf.PdfDocument"/>
+    <fullyQualifiedTypeName name="com.itextpdf.layout.Document"/>
+    <fullyQualifiedTypeName name="com.itextpdf.layout.element.Text"/>
+    <fullyQualifiedTypeName name="com.itextpdf.layout.element.Paragraph"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
+    <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.ast.ThisReference"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicSplitPaneUI.BasicHorizontalLayoutManager"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>

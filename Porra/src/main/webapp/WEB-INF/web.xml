@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>Porra</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Porra</display-name>
+    <servlet-name>Porra</servlet-name>
+    <servlet-class>mx.uaemex.ing_software_ii.ejercicios.porra.Porra</servlet-class>
+    <init-param>
+      <description>Primera palabra</description>
+      <param-name>palabra_1</param-name>
+      <param-value>Goooooooooya</param-value>
+    </init-param>
+    <init-param>
+      <description>repeticiones</description>
+      <param-name>repeticiones</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <init-param>
+      <description>Segunda palabra</description>
+      <param-name>palabra_2</param-name>
+      <param-value>cachun</param-value>
+    </init-param>
+    <init-param>
+      <description>Tercera palabra</description>
+      <param-name>palabra_3</param-name>
+      <param-value>rra</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Porra</servlet-name>
+    <url-pattern>/porra</url-pattern>
+  </servlet-mapping>
+</web-app>

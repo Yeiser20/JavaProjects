@@ -1,0 +1,7 @@
+127.0.0.1 - - [29/Aug/2022:22:58:10 -0500] "GET / HTTP/1.1" 404 688
+0:0:0:0:0:0:0:1 - - [29/Aug/2022:22:58:11 -0500] "GET /Ejemplillos/Hola HTTP/1.1" 200 163
+0:0:0:0:0:0:0:1 - - [29/Aug/2022:22:58:39 -0500] "GET /Ejemplillos/Hola HTTP/1.1" 200 163
+0:0:0:0:0:0:0:1 - - [29/Aug/2022:23:00:27 -0500] "POST /manager/html/upload?org.apache.catalina.filters.CSRF_NONCE=F3A79F420A6E49304AAF34FA69927C66 HTTP/1.1" 404 715
+0:0:0:0:0:0:0:1 - - [29/Aug/2022:23:00:36 -0500] "POST /manager/html/upload?org.apache.catalina.filters.CSRF_NONCE=F3A79F420A6E49304AAF34FA69927C66 HTTP/1.1" 404 715
+0:0:0:0:0:0:0:1 - - [29/Aug/2022:23:00:51 -0500] "POST /manager/html/upload?org.apache.catalina.filters.CSRF_NONCE=F3A79F420A6E49304AAF34FA69927C66 HTTP/1.1" 404 715
+0:0:0:0:0:0:0:1 - - [29/Aug/2022:23:01:01 -0500] "POST /manager/html/upload?org.apache.catalina.filters.CSRF_NONCE=F3A79F420A6E49304AAF34FA69927C66 HTTP/1.1" 404 715

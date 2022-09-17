@@ -1,0 +1,20 @@
+package Java;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public class Controller {
+	
+    public static final String DEST2 ="C:\\Users\\danie\\OneDrive\\Documentos\\Document.pdf";
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		  ArrayList<Alumnos> alumnos = new ArrayList<>();
+	        Alumnos al = new Alumnos("123456", "Acentuacion", "nombre", "paisO", "colonia", "nombre de la institucion", "nombre de la escuela", "nombre de la carrera", "campus", "correo preferencia", "correo Institucional", "codigo Pais", "pais", "estado civil", "municipio", "apellido paterno", "codigo de area", "apellido materno", "estado ", "fecha dia actual", "genero ", "generoF", "no se", "n", "n", "n", 1, 2, 3,20,"mes",2001);
+	        alumnos.add(al);
+	        CartaDedicacion cde = new CartaDedicacion("Toluca", "Estado de Mexico", "AGOSTO", "DANIEL ARCHUNDIA SANCHEZ ", "EN CARGADO DE LABORATORIO", "FACULTAD DE INGENIERIA", "POSGRADO", "FIRMA", "VICTOR DANIEL ARCHUNDIA SANCHEZ", 12,8, 7, 1612051);
+	        cde.crearPdf(DEST2);
+	        System.out.println("Archivos guardados correctamente");
+	        
+
+	}
+}

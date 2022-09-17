@@ -1,0 +1,13 @@
+package servlet;
+
+import java.io.FileNotFoundException;
+
+public class Main {
+	public static final String DIREC = "C:\\Users\\danie\\OneDrive\\Documentos\\Eclipse\\Prueba.pdf";
+	public static void main(String[] args) throws FileNotFoundException {
+		ArchivoPrueba ap = new ArchivoPrueba("daniel","archundia");
+		ap.CrearPdfd(DIREC);
+		System.out.println("Arfchivo guardado");
+	}
+
+}
