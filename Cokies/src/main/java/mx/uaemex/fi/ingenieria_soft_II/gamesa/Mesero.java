@@ -6,8 +6,12 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import javax.swing.plaf.basic.BasicSplitPaneUI.BasicHorizontalLayoutManager;
 
 /**
  * Servlet implementation class Mesero
@@ -23,8 +27,14 @@ public class Mesero extends HttpServlet {
 		PrintWriter pw;
 		Cookie[] tarro;
 		String sabor="";
+		HttpSession sesion;
+		String t;
 		
+		sesion = request.getSession();
+		
+		t = (String)sesion.getAttribute("talla favorita");
 		//procesar las COOKIES
+		
 		tarro = request.getCookies();
 		if(tarro!=null) {
 		for (Cookie g:tarro) {
@@ -49,6 +59,7 @@ public class Mesero extends HttpServlet {
 			pw.println("<p>Para prepararte las galletas debes seleccionar el sabor");
 			pw.println("<a href=\"index.html\">Ir a seleccionar</a>");
 		}
+		pw.println("la talla es "+t);
 		pw.println("</body>");
 		pw.println("</html>");
 		

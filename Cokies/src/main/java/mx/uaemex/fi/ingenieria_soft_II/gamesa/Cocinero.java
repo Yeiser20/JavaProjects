@@ -6,6 +6,8 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -22,11 +24,17 @@ public class Cocinero extends HttpServlet {
 		PrintWriter pw;
 		Cookie galleta;
 		String sabor;
+		HttpSession sesion;
+		String talla;
 		
+		sesion = request.getSession();
+		talla = request.getParameter("talla");
 		//procesar el formulario
 		sabor = request.getParameter("sabor");
 		
+		sesion.setAttribute("talla favorita", talla);
 		galleta = new Cookie("sabor",sabor);
+		
 		response.addCookie(galleta);
 		
 		galleta.setValue(sabor);
@@ -39,7 +47,8 @@ public class Cocinero extends HttpServlet {
 		pw.println("</head>");
 		pw.println("<body>");
 		pw.println("<p>Gracias por compartir sus preferencias</p>");
-		pw.println("<a href=\"index.html\">Regresar</a>");
+		pw.println("<a href=\"index.html\">Regresar </a>");
+		pw.println("y la sesion es ... "+sesion);
 		pw.println("</body>");
 		pw.println("</html>");
 		
